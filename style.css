@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+
+body {
+    background-image: url("./assets/ashley-byrd-fWBcjhd47H8-unsplash.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Teko', sans-serif;
+    /*animation: changebg 3s 2;*/
+}
+
+/*@keyframes changebg {
+    0%   {background-color: red;}
+    25%  {background-color:yellow;}
+    50%  {background-color: black;}
+    100% {background-color: green;}
+}*/
+
+@keyframes blink {
+    20%,
+    24%,
+    55% {color: rgba(17, 17, 17, 0.616); text-shadow: none;}
+        0%,
+        19%,
+        21%,
+        23%,
+        25%,
+        54%,
+        56%,
+        100% {text-shadow:  0 0 5px #e9cd94, 0 0 15px #e0c694, 0 0 20px #e2af24, 0 0 40px #f1b545, 0 0 60px #f7b527, 0 0 10px #cf640c, 0 0 98px #ec5a05;
+    color: #ecdac7dc;
+    }
+    }
+    
+
+    h5 {
+        
+        padding: 4vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10vh;
+        color:#fffef9;
+        font-family: neon;
+        text-align: center;
+        animation: blink 5s infinite, bounce 2s;
+        animation-fill-mode: forwards;
+        
+    }
+    @font-face {
+        font-family: neon;
+        src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+    }
+
+    @keyframes bounce {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-125px);
+        }
+    }
+
+    @keyframes expand {
+        from {
+            height: 80px;
+        }
+        to {
+            height: 405px;
+        }
+    }
+
+    #menu {
+        height: 80px;
+        width: 250px;
+        position: absolute;
+        background-color: #60858eef;
+        margin-top: 35vh;
+        text-align: center;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+        animation: expand 2s alternate;
+        animation-fill-mode: forwards;
+    }
+
+    span {
+        line-height: 10vh;
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    @keyframes pulse {
+        0% {
+            background-color: #aadeebef;
+        } 
+        25%{
+            background-color:#60858eef;
+        }
+        50%{
+            background-color: #a4c8d1ef;
+        }
+        75%{
+            background-color: #3b5157ef;
+        }
+        100%{
+            background-color: #3b5157ef;
+        }
+    }
+
+    #button {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 23vh;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: 3px solid #6cbdcfef;
+        box-shadow: 0 0 15px 5px#60858eef;
+        animation: pulse 1s alternate infinite;
+    }
